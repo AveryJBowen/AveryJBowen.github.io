@@ -9,20 +9,86 @@
         <link href="https://fonts.googleapis.com/css?family=Gentium+Book+Basic|Trochut&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1 class="main-title">Theodore Roosevelt Journal Project</h1>
-        <div class="background-img-main">
+        <h1 id="main-title">Theodore Roosevelt Journal Project</h1>
+        <h2 id="day"></h2>
+        
+        <div id="background-img-main">
             <img src="../images/TR_oval.png">
         </div>
-        <div class="main-welcome">
-            <p class="main-text">
+        
+        <div id="fact-main">
+        </div>
+        
+        <div id="main-welcome">
+            <p id="main-text">
                 Welcome to the Theodore Roosevelt Journal Project.  Click the buttons below to receive your daily prompt.
             </p>
         </div>
-        <div class="buttons">
-            <input type="button" id="yesterday" value="YESTERDAY">
-            <input type="button" id="today" value="TODAY">
-            <input type="button" id="tomorrow" value="TOMORROW">
+        
+        <div>
+            <h2 id="journal"></h2>
+            <p id="prompt"></p>
         </div>
+        
+        <div id="buttons">
+            <input type="button" id="yesterday" value="YESTERDAY" onclick="showYesterday()">
+            <input type="button" id="today" value="TODAY" onclick="showToday()">
+            <input type="button" id="tomorrow" value="TOMORROW" onclick="showTomorrow()">
+        </div>
+        
+<!-- BELOW BE SCRIPTS -->
+        <script>
+            var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+            
+            function matchDate(dateString){
+                return 
+            }
+                        
+            function showYesterday(){
+                //get today, subtract 1 day:
+                var date = new Date();
+                date.setDate(date.getDate()-1);
+                //make the date string:
+                var yesterdayString = months[date.getMonth()] + " " + date.getDate();
+                document.getElementById("main-title").innerHTML = "YESTERDAY";
+                document.getElementById("day").innerHTML = days[date.getDay()] + ", " + yesterdayString + ", " + date.getFullYear();
+                document.getElementById("main-welcome").innerHTML = "";
+                document.getElementById("buttons").innerHTML = "";
+                
+                document.getElementById("fact-main").innerHTML = "put the fact here";
+                document.getElementById("journal").innerHTML = "JOURNAL:";
+                document.getElementById("prompt").innerHTML = "put the prompt here";
+                
+                
+            }
+            
+            function showToday(){
+                var date = new Date();
+                var todayString = months[date.getMonth()] + " " + date.getDate();
+                
+                document.getElementById("main-title").innerHTML = "TODAY";
+                document.getElementById("day").innerHTML = days[date.getDay()] + ", " + todayString + ", " + date.getFullYear();
+                document.getElementById("main-welcome").innerHTML = "";
+                document.getElementById("buttons").innerHTML = "";
+                
+            }
+            
+            function showTomorrow(){
+                //get today, add 1 day:
+                var date = new Date();
+                date.setDate(date.getDate()+1);
+                //make the date string:
+                var tomorrowString = months[date.getMonth()] + " " + date.getDate();
+                                
+                document.getElementById("main-title").innerHTML = "TOMORROW";
+                document.getElementById("day").innerHTML = days[date.getDay()] + ", " + tomorrowString + ", " + date.getFullYear();
+                document.getElementById("main-welcome").innerHTML = "";
+                document.getElementById("buttons").innerHTML = "";
+                
+            }
+            
+        </script>
         
     </body>
 

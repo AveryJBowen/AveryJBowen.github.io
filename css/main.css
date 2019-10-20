@@ -2,13 +2,13 @@ body{
     background-color: #969696;
     font-size: 100%;
 }
-.background-img-main{
+#background-img-main{
     width: 50%;
     margin: 0 auto;
     padding-top: 5vw;
     padding-bottom: 5vw;  
 }
-.background-img-main img{
+#background-img-main img{
     opacity: 0.5;
     max-width: 100%;
     height: auto;
@@ -16,21 +16,29 @@ body{
     display: block;
     margin: auto;
 }
-h1.main-title{
+#main-title{
     font-family: 'Trochut', serif;
     font-size: 8vw;
     width: 50%;
     margin: 0 auto;
     text-align: center;
 }
-.main-text{
+#day, #journal{
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 5vw;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 3vw;
+}
+#main-text, #prompt, #fact-main{
     font-family: 'Gentium Book Basic', serif;
     font-size: 3.5vw;
     width: 50%;
     margin: 0 auto;
     text-align: center;
 }
-.buttons{
+#buttons{
     width: 85%;
     margin: 0 auto;
     padding-top: 5vw;
