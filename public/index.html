@@ -40,10 +40,26 @@
         <script>
             var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-            
-            function matchDate(dateString){
-                return 
-            }
+            var info = [
+                {
+                    "date": "Oct 19",
+                    "fact": "On this day in ... Theodore Roosevelt...",
+                    "prompt": "Maybe you did a thing like that...",
+                    "image": "TR_child"
+                },
+                {
+                    "date": "Oct 20",
+                    "fact": "On this day in 1905 while en route to Atlanta, Pres. Theodore Roosevelt’s train stopped in Roswell so he could visit Bulloch Hall, girlhood home of his mother Martha Bulloch Roosevelt.",
+                    "prompt": "Have you ever visited one of your parents' or grandparents' childhood homes? If so, what was your experience there?  What about the place informed the person that your parent or grandparent grew up to be?",
+                    "image": "TR_mother_oval"
+                },
+                {
+                    "date": "Oct 21",
+                    "fact": "On this day in ... Theodore Roosevelt...",
+                    "prompt": "Maybe you did a thing like that...",
+                    "image": "TR_oval"
+                }
+            ];
                         
             function showYesterday(){
                 //get today, subtract 1 day:
@@ -54,11 +70,13 @@
                 document.getElementById("main-title").innerHTML = "YESTERDAY";
                 document.getElementById("day").innerHTML = days[date.getDay()] + ", " + yesterdayString + ", " + date.getFullYear();
                 document.getElementById("main-welcome").innerHTML = "";
-                document.getElementById("buttons").innerHTML = "";
+                document.getElementById("buttons").innerHTML = "<input type='button' id='back' value='BACK' onclick='window.location.reload()'>";
                 
-                document.getElementById("fact-main").innerHTML = "put the fact here";
+                document.getElementById("fact-main").innerHTML = info[0].fact;
                 document.getElementById("journal").innerHTML = "JOURNAL:";
-                document.getElementById("prompt").innerHTML = "put the prompt here";
+                document.getElementById("prompt").innerHTML = info[0].prompt;
+                document.getElementById("background-img-main").innerHTML = "<img src='../images/" + info[0].image + ".png'>";
+                
                 
                 
             }
@@ -70,7 +88,12 @@
                 document.getElementById("main-title").innerHTML = "TODAY";
                 document.getElementById("day").innerHTML = days[date.getDay()] + ", " + todayString + ", " + date.getFullYear();
                 document.getElementById("main-welcome").innerHTML = "";
-                document.getElementById("buttons").innerHTML = "";
+                document.getElementById("buttons").innerHTML = "<input type='button' id='back' value='BACK' onclick='window.location.reload()'>";
+                
+                document.getElementById("fact-main").innerHTML = info[1].fact;
+                document.getElementById("journal").innerHTML = "JOURNAL:";
+                document.getElementById("prompt").innerHTML = info[1].prompt;
+                document.getElementById("background-img-main").innerHTML = "<img src='../images/" + info[1].image + ".png'>";
                 
             }
             
@@ -84,7 +107,12 @@
                 document.getElementById("main-title").innerHTML = "TOMORROW";
                 document.getElementById("day").innerHTML = days[date.getDay()] + ", " + tomorrowString + ", " + date.getFullYear();
                 document.getElementById("main-welcome").innerHTML = "";
-                document.getElementById("buttons").innerHTML = "";
+                document.getElementById("buttons").innerHTML = "<input type='button' id='back' value='BACK' onclick='window.location.reload()'>";
+                
+                document.getElementById("fact-main").innerHTML = info[2].fact;
+                document.getElementById("journal").innerHTML = "JOURNAL:";
+                document.getElementById("prompt").innerHTML = info[2].prompt;
+                document.getElementById("background-img-main").innerHTML = "<img src='../images/" + info[2].image + ".png'>";
                 
             }
             
