@@ -40,7 +40,23 @@
         <script>
             var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-            var info = [
+            console.log(months[2]);
+            var xmlhttp = new XMLHttpRequest();
+            console.log("making request");
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log("here i am");
+                    var myArr = JSON.parse(this.responseText);
+                    console.log(myArr[0]);
+                }
+                else{
+                    console.log(this.status);
+                }
+            };
+            xmlhttp.open("GET", "./facts.txt", true);
+            xmlhttp.send();
+            
+            /*var info = [
                 {
                     "date": "Oct 19",
                     "fact": "On this day in ... Theodore Roosevelt...",
@@ -59,7 +75,7 @@
                     "prompt": "Maybe you did a thing like that...",
                     "image": "TR_oval"
                 }
-            ];
+            ];*/
                         
             function showYesterday(){
                 //get today, subtract 1 day:
