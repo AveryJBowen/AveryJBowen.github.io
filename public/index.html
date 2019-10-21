@@ -40,17 +40,14 @@
         <script>
             var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-            console.log(months[2]);
+            var info;
+            
             var xmlhttp = new XMLHttpRequest();
             console.log("making request");
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                    console.log("here i am");
-                    var info = JSON.parse(this.responseText);
+                    info = JSON.parse(this.responseText);
                     console.log(info[0]);
-                }
-                else{
-                    console.log(this.status);
                 }
             };
             xmlhttp.open("GET", "./facts.txt", true);
