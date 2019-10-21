@@ -70,7 +70,7 @@
                 document.getElementById("main-title").innerHTML = "YESTERDAY";
                 document.getElementById("day").innerHTML = days[date.getDay()] + ", " + yesterdayString + ", " + date.getFullYear();
                 document.getElementById("main-welcome").innerHTML = "";
-                document.getElementById("buttons").innerHTML = "<input type='button' id='back' value='BACK' onclick='window.location.reload()'>";
+                document.getElementById("buttons").innerHTML = "<input type='button' id='back' value='BACK' onclick='goBack()'>";
                 
                 document.getElementById("fact-main").innerHTML = info[0].fact;
                 document.getElementById("journal").innerHTML = "JOURNAL:";
@@ -87,7 +87,7 @@
                 document.getElementById("main-title").innerHTML = "TODAY";
                 document.getElementById("day").innerHTML = days[date.getDay()] + ", " + todayString + ", " + date.getFullYear();
                 document.getElementById("main-welcome").innerHTML = "";
-                document.getElementById("buttons").innerHTML = "<input type='button' id='back' value='BACK' onclick='window.location.reload()'>";
+                document.getElementById("buttons").innerHTML = "<input type='button' id='back' value='BACK' onclick='goBack()'>";
                 
                 document.getElementById("fact-main").innerHTML = info[1].fact;
                 document.getElementById("journal").innerHTML = "JOURNAL:";
@@ -107,12 +107,17 @@
                 document.getElementById("main-title").innerHTML = "TOMORROW";
                 document.getElementById("day").innerHTML = days[date.getDay()] + ", " + tomorrowString + ", " + date.getFullYear();
                 document.getElementById("main-welcome").innerHTML = "";
-                document.getElementById("buttons").innerHTML = "<input type='button' id='back' value='BACK' onclick='window.location.reload()'>";
+                document.getElementById("buttons").innerHTML = "<input type='button' id='back' value='BACK' onclick='goBack()'>";
                 
                 document.getElementById("fact-main").innerHTML = info[2].fact;
                 document.getElementById("journal").innerHTML = "JOURNAL:";
                 document.getElementById("prompt").innerHTML = info[2].prompt;
                 document.getElementById("background-img-main").innerHTML = "<img src='../images/" + info[2].image + ".png'>";
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+            function goBack(){
+                window.location.reload();
                 document.body.scrollTop = 0; // For Safari
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
             }
