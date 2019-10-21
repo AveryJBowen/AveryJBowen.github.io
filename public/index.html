@@ -38,9 +38,18 @@
         
 <!-- BELOW BE SCRIPTS -->
         <script>
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    var jsonArray = JSON.parse(this.responseText);
+                    console.log(jsonArray);
+                }
+            };
+            xmlhttp.open("GET", "../sources/facts.json", true);
+            xmlhttp.send();
             var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-            var info = [
+            /*var info = [
                 {
                     "date": "Oct 19",
                     "fact": "On this day in ... Theodore Roosevelt...",
@@ -59,7 +68,7 @@
                     "prompt": "Maybe you did a thing like that...",
                     "image": "TR_oval"
                 }
-            ];
+            ];*/
                         
             function showYesterday(){
                 //get today, subtract 1 day:
@@ -72,10 +81,10 @@
                 document.getElementById("main-welcome").innerHTML = "";
                 document.getElementById("buttons").innerHTML = "<input type='button' id='back' value='BACK' onclick='window.location.reload()'>";
                 
-                document.getElementById("fact-main").innerHTML = info[0].fact;
+                //document.getElementById("fact-main").innerHTML = info[0].fact;
                 document.getElementById("journal").innerHTML = "JOURNAL:";
-                document.getElementById("prompt").innerHTML = info[0].prompt;
-                document.getElementById("background-img-main").innerHTML = "<img src='../images/" + info[0].image + ".png'>";
+                //document.getElementById("prompt").innerHTML = info[0].prompt;
+                //document.getElementById("background-img-main").innerHTML = "<img src='../images/" + info[0].image + ".png'>";
                 
                 
                 
