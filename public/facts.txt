@@ -19,20 +19,38 @@
 		},
         {
 			"date": "Oct 22",
-			"fact": "On this day in ... Theodore Roosevelt...",
-			"prompt": "Maybe you did a thing like that...",
-			"image": "TR_child"
+			"fact": "On this day 1907, a run on the stock of the Knickerbocker Trust Company sets events in motion that will lead to a depression. The crisis is temporarily averted when President Theodore Roosevelt urges J.P. Morgan to invest heavily in the financial system to save it from collapse.",
+			"prompt": "Has there ever been a time when you used your leverage and charisma to avert a crisis?  If so, how did you steer the narrow path?  If not, how might you respond if you were ever to find yourself in a situation that you could effect a positive outcome by intervening?",
+			"image": "TR_logo_oval"
 		},
         {
 			"date": "Oct 23",
-			"fact": "On this day in ... Theodore Roosevelt...",
-			"prompt": "Maybe you did a thing like that...",
-			"image": "TR_oval"
+			"fact": "On this day in 1907, the British Puck Magazine prints a cover featuring President Theodore Roosevelt resisting those who would promote conflict between the United States and Japan.  In resisting this call for war, Roosevelt promoted an alliance that would benefit the United States greatly during the First World War.",
+			"prompt": "Have you ever been in a situation where a vocal contingent of people was coercing you to act one way, but taking a broader view helped you in the long run?",
+			"image": "puck"
 		},
         {
 			"date": "Oct 24",
-			"fact": "On this day in ... Theodore Roosevelt...",
-			"prompt": "Maybe you did a thing like that...",
-			"image": "TR_mother_oval"
+			"fact": "On this day in 1912, Democratic nominee (President) Woodrow Wilson suspended his presidential campaign while President Theodore Roosevelt recovered from an assassination attempt and could resume his own presidential campaign. (Republican nominee President William Howard Taft would also do the same.)",
+			"prompt": "Have you ever been in a competition and have either been injured or had another setback where the other competitors slowed or halted to provide a level field?  Have you been in a situation where you were the uninjured party in a competition where someone was injured?  If so, what did you do?",
+			"image": "TR_aftermath"
+		},
+        {
+			"date": "Oct 25",
+			"fact": "On this day in 1905, Theodore Roosevelt made a speech in Memphis, TN where he said: 'This country has nothing to fear from the crooked man who fails.  We put him in jail.  It is the crooked man who succeeds who is a threat to this country.'",
+			"prompt": "Has there ever been a time in your life where you succeeded by being crooked or duplicitous?  Looking back, what are your feelings about that now?  Have you made amends?",
+			"image": "TR_speech1"
+		},
+        {
+			"date": "Oct 26",
+			"fact": "On this day in 1905, Theodore Roosevelt gives a speech tin New Orleans, LA where he states: 'One thing that, as President of this country, I won't do, is to make a bluff that I can't make good.'",
+			"prompt": "When have you bluffed your way out of a situation?  Was it successful? Were you able to make good on the bluff, either hypothetically or in actuality or were you simply lucky to have no one call you on it?",
+			"image": "TR_serious"
+		},
+        {
+			"date": "Oct 27",
+			"fact": "On this day in 1858, Theodore Roosevelt was born to Theodore Sr. and Martha Bulloch Roosevelt in New York City.",
+			"prompt": "Consider the moment of your own birth and the hopes and dreams that your parents held for you in those first hours and days.  Have you lived up to the spirit of their best wishes?  If so, how?  If not, what can you do to start?",
+			"image": "TR_child"
 		}
 ]
