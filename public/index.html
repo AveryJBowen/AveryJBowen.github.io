@@ -54,6 +54,7 @@
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     info = JSON.parse(this.responseText);
+                    console.log(info[2]);
                 }
             };
             xmlhttp.open("GET", "./facts.txt", true);
@@ -62,8 +63,10 @@
             for(var i = 0; i < info.length; i++){
                 if(info[i].date == searchString){
                     index = i;
+                    console.log("Found today at index " + index);
                 }
             }
+            
             
                         
             function showYesterday(){
