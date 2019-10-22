@@ -39,83 +39,86 @@
 <!-- BELOW BE SCRIPTS -->
         <script>
             var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var monthsAbbr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
             var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
             var info;
+                    
+            var today = new Date();
+            var searchString = monthsAbbr[today.getMonth()] + " " + today.getDate();
+            var yesterday = new Date();
+            yesterday.setDate(yesterday.getDate()-1);
+            var tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate()+1);
             
             var xmlhttp = new XMLHttpRequest();
-            console.log("making request");
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     info = JSON.parse(this.responseText);
-                    console.log(info[0]);
                 }
             };
             xmlhttp.open("GET", "./facts.txt", true);
             xmlhttp.send();
+            var index;
+            for(var i = 0; i < info.length; i++){
+                if(info[i].date == searchString){
+                    index = i;
+                }
+            }
+            
                         
             function showYesterday(){
-                //get today, subtract 1 day:
-                var date = new Date();
-                date.setDate(date.getDate()-1);
-                //make the date string:
-                var yesterdayString = months[date.getMonth()] + " " + date.getDate();
+                var yesterdayString = months[yesterday.getMonth()] + " " + yesterday.getDate();
                 document.getElementById("main-title").innerHTML = "YESTERDAY";
-                document.getElementById("day").innerHTML = days[date.getDay()] + ", " + yesterdayString + ", " + date.getFullYear();
+                document.getElementById("day").innerHTML = days[yesterday.getDay()] + ", " + yesterdayString + ", " + yesterday.getFullYear();
+                
                 document.getElementById("main-welcome").innerHTML = "";
                 document.getElementById("buttons").innerHTML = "<input type='button' id='back' value='BACK' onclick='goBack()'>";
-                
-                document.getElementById("fact-main").innerHTML = info[0].fact;
+                document.getElementById("fact-main").innerHTML = info[index-1].fact;
                 document.getElementById("journal").innerHTML = "JOURNAL:";
-                document.getElementById("prompt").innerHTML = info[0].prompt;
-                document.getElementById("background-img-main").innerHTML = "<img src='../images/" + info[0].image + ".png'>";
+                document.getElementById("prompt").innerHTML = info[index-1].prompt;
+                document.getElementById("background-img-main").innerHTML = "<img src='../images/" + info[index-1].image + ".png'>";
                 document.body.scrollTop = 0; // For Safari
-                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera            
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera      
             }
             
             function showToday(){
-                var date = new Date();
-                var todayString = months[date.getMonth()] + " " + date.getDate();
-                
+                var todayString = months[today.getMonth()] + " " + today.getDate();
                 document.getElementById("main-title").innerHTML = "TODAY";
-                document.getElementById("day").innerHTML = days[date.getDay()] + ", " + todayString + ", " + date.getFullYear();
+                document.getElementById("day").innerHTML = days[today.getDay()] + ", " + todayString + ", " + today.getFullYear();
                 document.getElementById("main-welcome").innerHTML = "";
                 document.getElementById("buttons").innerHTML = "<input type='button' id='back' value='BACK' onclick='goBack()'>";
                 
-                document.getElementById("fact-main").innerHTML = info[1].fact;
+                document.getElementById("fact-main").innerHTML = info[index].fact;
                 document.getElementById("journal").innerHTML = "JOURNAL:";
-                document.getElementById("prompt").innerHTML = info[1].prompt;
-                document.getElementById("background-img-main").innerHTML = "<img src='../images/" + info[1].image + ".png'>";
+                document.getElementById("prompt").innerHTML = info[index].prompt;
+                document.getElementById("background-img-main").innerHTML = "<img src='../images/" + info[index].image + ".png'>";
                 document.body.scrollTop = 0; // For Safari
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
             }
             
             function showTomorrow(){
-                //get today, add 1 day:
-                var date = new Date();
-                date.setDate(date.getDate()+1);
-                //make the date string:
-                var tomorrowString = months[date.getMonth()] + " " + date.getDate();
+                
+                var tomorrowString = months[tomorrow.getMonth()] + " " + tomorrow.getDate();
                                 
                 document.getElementById("main-title").innerHTML = "TOMORROW";
-                document.getElementById("day").innerHTML = days[date.getDay()] + ", " + tomorrowString + ", " + date.getFullYear();
+                document.getElementById("day").innerHTML = days[tomorrow.getDay()] + ", " + tomorrowString + ", " + tomorrow.getFullYear();
                 document.getElementById("main-welcome").innerHTML = "";
                 document.getElementById("buttons").innerHTML = "<input type='button' id='back' value='BACK' onclick='goBack()'>";
                 
-                document.getElementById("fact-main").innerHTML = info[2].fact;
+                document.getElementById("fact-main").innerHTML = info[index+1].fact;
                 document.getElementById("journal").innerHTML = "JOURNAL:";
-                document.getElementById("prompt").innerHTML = info[2].prompt;
-                document.getElementById("background-img-main").innerHTML = "<img src='../images/" + info[2].image + ".png'>";
+                document.getElementById("prompt").innerHTML = info[index+1].prompt;
+                document.getElementById("background-img-main").innerHTML = "<img src='../images/" + info[index+1].image + ".png'>";
                 document.body.scrollTop = 0; // For Safari
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
             }
+            
             function goBack(){
                 document.body.scrollTop = 0; // For Safari
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
                 window.location.reload();
             }
-            
         </script>
         
     </body>
-
 </html>

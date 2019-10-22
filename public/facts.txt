@@ -1,4 +1,5 @@
-[{
+[       
+        {
 			"date": "Oct 19",
 			"fact": "On this day in ... Theodore Roosevelt...",
 			"prompt": "Maybe you did a thing like that...",
@@ -15,4 +16,23 @@
 			"fact": "On this day in ... Theodore Roosevelt...",
 			"prompt": "Maybe you did a thing like that...",
 			"image": "TR_oval"
-		}]
+		},
+        {
+			"date": "Oct 22",
+			"fact": "On this day in ... Theodore Roosevelt...",
+			"prompt": ""Maybe you did a thing like that...",
+			"image": "TR_child"
+		},
+        {
+			"date": "Oct 23",
+			"fact": "On this day in ... Theodore Roosevelt...",
+			"prompt": "Maybe you did a thing like that...",
+			"image": "TR_oval"
+		},
+        {
+			"date": "Oct 24",
+			"fact": "On this day in ... Theodore Roosevelt...",
+			"prompt": ""Maybe you did a thing like that...",
+			"image": "TR_mother_oval"
+		}
+]
