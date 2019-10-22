@@ -55,17 +55,18 @@
                 if (this.readyState == 4 && this.status == 200) {
                     info = JSON.parse(this.responseText);
                     console.log(info[2]);
+                    for(var i = 0; i < info.length; i++){
+                        if(info[i].date == searchString){
+                            index = i;
+                            console.log("Found today at index " + index);
+                        }
+                    }
                 }
             };
             xmlhttp.open("GET", "./facts.txt", true);
             xmlhttp.send();
             var index;
-            for(var i = 0; i < info.length; i++){
-                if(info[i].date == searchString){
-                    index = i;
-                    console.log("Found today at index " + index);
-                }
-            }
+            
             
             
                         
