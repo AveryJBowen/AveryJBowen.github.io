@@ -20,7 +20,7 @@
         {
 			"date": "Oct 22",
 			"fact": "On this day in ... Theodore Roosevelt...",
-			"prompt": ""Maybe you did a thing like that...",
+			"prompt": "Maybe you did a thing like that...",
 			"image": "TR_child"
 		},
         {
@@ -32,7 +32,7 @@
         {
 			"date": "Oct 24",
 			"fact": "On this day in ... Theodore Roosevelt...",
-			"prompt": ""Maybe you did a thing like that...",
+			"prompt": "Maybe you did a thing like that...",
 			"image": "TR_mother_oval"
 		}
 ]
