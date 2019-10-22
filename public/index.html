@@ -35,14 +35,12 @@
             <input type="button" id="today" value="TODAY" onclick="showToday()">
             <input type="button" id="tomorrow" value="TOMORROW" onclick="showTomorrow()">
         </div>
-        
 <!-- BELOW BE SCRIPTS -->
         <script>
             var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
             var monthsAbbr = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
             var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
             var info;
-                    
             var today = new Date();
             var searchString = monthsAbbr[today.getMonth()] + " " + today.getDate();
             var yesterday = new Date();
@@ -54,22 +52,16 @@
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                     info = JSON.parse(this.responseText);
-                    console.log(info[2]);
                     for(var i = 0; i < info.length; i++){
                         if(info[i].date == searchString){
                             index = i;
-                            console.log("Found today at index " + index);
                         }
                     }
                 }
             };
             xmlhttp.open("GET", "./facts.txt", true);
             xmlhttp.send();
-            var index;
-            
-            
-            
-                        
+            var index;       
             function showYesterday(){
                 var yesterdayString = months[yesterday.getMonth()] + " " + yesterday.getDate();
                 document.getElementById("main-title").innerHTML = "YESTERDAY";
@@ -84,14 +76,12 @@
                 document.body.scrollTop = 0; // For Safari
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera      
             }
-            
             function showToday(){
                 var todayString = months[today.getMonth()] + " " + today.getDate();
                 document.getElementById("main-title").innerHTML = "TODAY";
                 document.getElementById("day").innerHTML = days[today.getDay()] + ", " + todayString + ", " + today.getFullYear();
                 document.getElementById("main-welcome").innerHTML = "";
-                document.getElementById("buttons").innerHTML = "<input type='button' id='back' value='BACK' onclick='goBack()'>";
-                
+                document.getElementById("buttons").innerHTML = "<input type='button' id='back' value='BACK' onclick='goBack()'>"; 
                 document.getElementById("fact-main").innerHTML = info[index].fact;
                 document.getElementById("journal").innerHTML = "JOURNAL:";
                 document.getElementById("prompt").innerHTML = info[index].prompt;
@@ -99,16 +89,12 @@
                 document.body.scrollTop = 0; // For Safari
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
             }
-            
             function showTomorrow(){
-                
-                var tomorrowString = months[tomorrow.getMonth()] + " " + tomorrow.getDate();
-                                
+                var tomorrowString = months[tomorrow.getMonth()] + " " + tomorrow.getDate();           
                 document.getElementById("main-title").innerHTML = "TOMORROW";
                 document.getElementById("day").innerHTML = days[tomorrow.getDay()] + ", " + tomorrowString + ", " + tomorrow.getFullYear();
                 document.getElementById("main-welcome").innerHTML = "";
                 document.getElementById("buttons").innerHTML = "<input type='button' id='back' value='BACK' onclick='goBack()'>";
-                
                 document.getElementById("fact-main").innerHTML = info[index+1].fact;
                 document.getElementById("journal").innerHTML = "JOURNAL:";
                 document.getElementById("prompt").innerHTML = info[index+1].prompt;
@@ -116,13 +102,11 @@
                 document.body.scrollTop = 0; // For Safari
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
             }
-            
             function goBack(){
                 document.body.scrollTop = 0; // For Safari
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
                 window.location.reload();
             }
         </script>
-        
     </body>
 </html>
