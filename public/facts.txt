@@ -13,8 +13,8 @@
 		},
 		{
 			"date": "Oct 21",
-			"fact": "On this day in ... Theodore Roosevelt...",
-			"prompt": "Maybe you did a thing like that...",
+			"fact": "On this day in 1902, The Anthracite Coal Strike ends, after President Roosevelt summoned union leaders and mine operators to the White House, a significant gesture for both his presidency and for the development of his reform program, known as the 'Square Deal.'",
+			"prompt": "When have you used diplomacy to solve a serious problem in your life?  Was it successful? How did the outcome (good or bad) change the way you saw yourself or others saw you?",
 			"image": "TR_oval"
 		},
         {
