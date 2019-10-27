@@ -52,5 +52,29 @@
 			"fact": "On this day in 1858, Theodore Roosevelt was born to Theodore Sr. and Martha Bulloch Roosevelt in New York City.",
 			"prompt": "Consider the moment of your own birth and the hopes and dreams that your parents held for you in those first hours and days.  Have you lived up to the spirit of their best wishes?  If so, how?  If not, what can you do to start?",
 			"image": "TR_child"
+		},
+        {
+			"date": "Oct 28",
+			"fact": "Quote: 'It is hard to fail, but it is worse never to have tried to succeed.'",
+			"prompt": "Think of a time when you didn't take action because you were too afraid of failure.  What lessons did you learn from that experience?",
+			"image": "TR_serious"
+		},
+        {
+			"date": "Oct 29",
+			"fact": "On this date in 1901, convicted presidential assassin Leon Czolgosz was executed in Auburn, NY at 7:12am.",
+			"prompt": "Think about a time when someone hurt or wronged you.  What punishments or consequences did they receive for those actions against you?  Do you feel that outcome gave you closure?",
+			"image": "TR_aftermath"
+		},
+        {
+			"date": "Oct 30",
+			"fact": "Quote: 'When you're at the end of your rope, tie a knot and hold on.'",
+			"prompt": "What situation prompted you to knuckle down and simply persevere?  Write about your mindset at the end of your rope and the strength you exhibited by simply holding fast.",
+			"image": "TR_speech1"
+		},
+        {
+			"date": "Oct 31",
+			"fact": "Quote: 'People don't care how much you know until they know how much you care.'",
+			"prompt": "How have you persuaded someone by demonstrating how much you care about them or their circumstances?",
+			"image": "TR_withchildren"
 		}
 ]
