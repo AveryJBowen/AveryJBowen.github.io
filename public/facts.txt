@@ -76,5 +76,23 @@
 			"fact": "Quote: 'People don't care how much you know until they know how much you care.'",
 			"prompt": "How have you persuaded someone by demonstrating how much you care about them or their circumstances?",
 			"image": "TR_withchildren"
+		},
+        {
+			"date": "Nov 1",
+			"fact": "Quote: 'Nothing in the world is worth having or worth doing unless it means effort, pain, difficulty...I have never in my life envied a human being who led an easy life.  I have envied a great many people who led difficult lives and led them well.'",
+			"prompt": "Certainly, during times of difficulties, a person does not consider how their handling of problems might be envied by others.  Do you think that you have lived through times of strife well?",
+			"image": "TR_serious"
+		},
+        {
+			"date": "Nov 2",
+			"fact": "On this day in 1886, four term state assemblyman Theodore Roosevelt loses in his bid to become the youngest Mayor of New York City, losing to 12th term congressman Abram Hewitt.",
+			"prompt": "Write about a time that you strove for something and lost the contest.  What about the experience prepared you to go on to further success?",
+			"image": "TR_youngman1"
+		},
+        {
+			"date": "Nov 3",
+			"fact": "On this day in 1903, a revolt breaks out in Panama against Columbian rule.  This revolt is organized by the Panama Canal Company and Panamanian revolutionaries, with the full support of President Roosevelt.",
+			"prompt": "There are multiple modern revolutions, some even going on today all around the world.  Take a moment today to read both sides of just one of those and write about which side you would support and examine the reasons why.",
+			"image": "TR_speech1"
 		}
 ]
