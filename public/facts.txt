@@ -94,5 +94,17 @@
 			"fact": "On this day in 1903, a revolt breaks out in Panama against Columbian rule.  This revolt is organized by the Panama Canal Company and Panamanian revolutionaries, with the full support of President Roosevelt.",
 			"prompt": "There are multiple modern revolutions, some even going on today all around the world.  Take a moment today to read both sides of just one of those and write about which side you would support and examine the reasons why.",
 			"image": "TR_speech1"
+		},
+        {
+			"date": "Nov 4",
+			"fact": "In November 1899, Vice President Garret Hobart died of heart failure, leaving an open spot on the 1900 Republican national ticket. Though Henry Cabot Lodge and others urged him to run for vice president in 1900, Roosevelt was reluctant to take the powerless position and issued a public statement saying that he would not accept the nomination.",
+			"prompt": "Often, the right thing comes at us at the wrong time.  Write about a specific time that's happened in your life.  Did you take time to prepare yourself and let the opportunity pass you by?",
+			"image": "TR_serious"
+		},
+        {
+			"date": "Nov 5",
+			"fact": "On this day in 1902, the new West Wing of the White House was completed and President Theodore Roosevelt worked there for the first time.",
+			"prompt": "Write about a time when you started a job in a new place.  Did the work you did feel more productive by being performed in a brand new setting?",
+			"image": "TR_desk"
 		}
 ]
