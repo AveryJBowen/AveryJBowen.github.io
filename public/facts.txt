@@ -106,5 +106,11 @@
 			"fact": "On this day in 1902, the new West Wing of the White House was completed and President Theodore Roosevelt worked there for the first time.",
 			"prompt": "Write about a time when you started a job in a new place.  Did the work you did feel more productive by being performed in a brand new setting?",
 			"image": "TR_desk"
+		},
+        {
+			"date": "Nov 6",
+			"fact": "On this day in 1906, President Theodore Roosevelt embarks on a 17 day trip to Panama and Puerto Rico, becoming the first president to make an official diplomatic tour outside of the continential United States.",
+			"prompt": "Write about a time when you made a trip outside of your country.  Did it affect the way you viewed that country or your own?  If you've never been outside of your country, write about a trip you'd like to take - where would you go and what do you want to do there?",
+			"image": "TR_oval"
 		}
 ]
