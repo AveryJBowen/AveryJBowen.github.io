@@ -112,5 +112,17 @@
 			"fact": "On this day in 1906, President Theodore Roosevelt embarks on a 17 day trip to Panama and Puerto Rico, becoming the first president to make an official diplomatic tour outside of the continential United States.",
 			"prompt": "Write about a time when you made a trip outside of your country.  Did it affect the way you viewed that country or your own?  If you've never been outside of your country, write about a trip you'd like to take - where would you go and what do you want to do there?",
 			"image": "TR_oval"
+		},
+        {
+			"date": "Nov 7",
+			"fact": "Quote: 'To announce that there must be no criticism of the President or that we are to stand by the President, right or wrong, is not only unpatriotic and servile, but is morally treasonable to the American public.'",
+			"prompt": "What are your thoughts on your country's current political state?  Is public criticism encouraged?  Do you agree with the political party in power?  Why or why not?",
+			"image": "TR_oval"
+		},
+        {
+			"date": "Nov 8",
+			"fact": "On this day in 1898, Theodore Roosevelt is elected Governor of New York.",
+			"prompt": "Have you ever won any sort of election?  Did it become a stepping stone to other things in your life?",
+			"image": "TR_desk"
 		}
 ]
